@@ -58,5 +58,11 @@ describe('PromptEvaluator & Comparator Engine', () => {
     assert.strictEqual(typeof comparison.scoreA, 'number');
     assert.strictEqual(typeof comparison.scoreB, 'number');
   });
+
+  it('handles empty variable interpolation without modifying raw templates', () => {
+    const rawTemplate = 'Static prompt with no variables.';
+    const rendered = PromptEvaluator.interpolate(rawTemplate, {});
+    assert.strictEqual(rendered, rawTemplate);
+  });
 });
 
