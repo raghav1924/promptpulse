@@ -285,3 +285,4 @@ export class AssertionEngine {
     return Math.max(0, 1 - distance / maxLen);
   }
 }
+

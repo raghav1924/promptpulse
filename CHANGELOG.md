@@ -16,3 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Standalone HTML report exporter for CI/CD workflows.
 - Native Node.js test runner suite with 10 passing unit tests.
 - Zero runtime external dependencies.
+

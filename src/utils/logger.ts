@@ -21,3 +21,4 @@ export const log = {
   error: (msg: string) => console.error(`${colors.red}✖${colors.reset} ${msg}`),
   title: (msg: string) => console.log(`\n${colors.bold}${colors.magenta}=== ${msg} ===${colors.reset}\n`),
 };
+

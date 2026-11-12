@@ -76,3 +76,4 @@ export interface PromptComparisonResult {
   regressions: { caseId: string; caseName: string; reason: string }[];
   improvements: { caseId: string; caseName: string; reason: string }[];
 }
+

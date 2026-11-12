@@ -19,3 +19,4 @@ body:
       description: Sample suite JSON or CLI invocation.
     validations:
       required: false
+

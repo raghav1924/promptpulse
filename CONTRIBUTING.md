@@ -29,3 +29,4 @@ Thank you for contributing to **PromptPulse**! We welcome community contribution
 
 ---
 Maintained by **[Jatin Sharma](https://jatinsh.netlify.app/)** • GitHub: **[@raghav1924](https://github.com/raghav1924)**
+

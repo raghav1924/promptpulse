@@ -126,3 +126,4 @@ When you launch `promptpulse studio`, open `http://localhost:6060` in your brows
 ## 📄 License
 
 Licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+
