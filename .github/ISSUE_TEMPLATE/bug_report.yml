@@ -1,0 +1,21 @@
+name: Bug Report
+description: Create a report to help improve PromptPulse
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for filing a bug report for PromptPulse!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the issue and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: suite-sample
+    attributes:
+      label: Test Suite Sample
+      description: Sample suite JSON or CLI invocation.
+    validations:
+      required: false

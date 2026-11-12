@@ -1,0 +1,95 @@
+{
+  "name": "CloudPlatform Triage Agent Evaluation Suite",
+  "description": "Regression test suite verifying JSON structured output, priority classification, and safety assertions.",
+  "systemPrompt": "You are an autonomous customer support triage agent for SaaS CloudPlatform.\nYour job is to analyze user bug reports and produce a structured JSON triage record.\n\nInput Query: {{user_query}}\nUser Tier: {{user_tier}}\n\nOutput Format: You MUST output valid JSON matching this schema:\n{\n  \"category\": \"billing\" | \"technical\" | \"access\",\n  \"urgency\": \"low\" | \"medium\" | \"high\" | \"critical\",\n  \"summary\": string,\n  \"action_required\": boolean\n}\n\nDo not apologize or include filler statements like \"As an AI\". Keep outputs concise and factual.",
+  "model": "gpt-4o",
+  "cases": [
+    {
+      "id": "CASE-01",
+      "name": "Critical Production Outage for Enterprise User",
+      "variables": {
+        "user_query": "Database connection pool exhausted, whole production cluster is down!",
+        "user_tier": "enterprise"
+      },
+      "mockOutput": "{\n  \"category\": \"technical\",\n  \"urgency\": \"critical\",\n  \"summary\": \"Production cluster outage due to exhausted database connection pool.\",\n  \"action_required\": true\n}",
+      "assertions": [
+        {
+          "type": "json_schema",
+          "value": {
+            "required": ["category", "urgency", "summary", "action_required"],
+            "properties": {
+              "category": "string",
+              "urgency": "string",
+              "summary": "string",
+              "action_required": "boolean"
+            }
+          }
+        },
+        {
+          "type": "contains",
+          "value": ["critical", "technical"]
+        },
+        {
+          "type": "forbidden_words"
+        },
+        {
+          "type": "max_tokens",
+          "threshold": 120
+        }
+      ]
+    },
+    {
+      "id": "CASE-02",
+      "name": "Billing Invoice Inconsistency for Pro User",
+      "variables": {
+        "user_query": "I was double charged on invoice #INV-9281 for November.",
+        "user_tier": "pro"
+      },
+      "mockOutput": "{\n  \"category\": \"billing\",\n  \"urgency\": \"medium\",\n  \"summary\": \"User reported double charge on invoice #INV-9281.\",\n  \"action_required\": true\n}",
+      "assertions": [
+        {
+          "type": "json_schema",
+          "value": {
+            "required": ["category", "urgency", "summary", "action_required"]
+          }
+        },
+        {
+          "type": "contains",
+          "value": "billing"
+        },
+        {
+          "type": "not_contains",
+          "value": "password"
+        },
+        {
+          "type": "max_tokens",
+          "threshold": 100
+        }
+      ]
+    },
+    {
+      "id": "CASE-03",
+      "name": "SSO Login Failure for Free Tier",
+      "variables": {
+        "user_query": "Getting 403 Forbidden when attempting Okta SAML sign-in.",
+        "user_tier": "free"
+      },
+      "mockOutput": "{\n  \"category\": \"access\",\n  \"urgency\": \"medium\",\n  \"summary\": \"Okta SAML 403 Forbidden authentication error on free tier account.\",\n  \"action_required\": false\n}",
+      "assertions": [
+        {
+          "type": "json_schema",
+          "value": {
+            "required": ["category", "urgency", "summary", "action_required"]
+          }
+        },
+        {
+          "type": "contains",
+          "value": "access"
+        },
+        {
+          "type": "forbidden_words"
+        }
+      ]
+    }
+  ]
+}
