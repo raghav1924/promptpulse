@@ -85,4 +85,14 @@ describe('AssertionEngine Validation Rules', () => {
     const failSim = AssertionEngine.evaluate({ type: 'similarity', threshold: 0.8 }, distant, 0, expected);
     assert.strictEqual(failSim.passed, false);
   });
+
+  it('validates cost ceiling assertions against estimated completion token usage', () => {
+    const output = 'Short concise response.';
+    const passCost = AssertionEngine.evaluate({ type: 'cost_ceiling', threshold: 0.01 }, output, 50);
+    assert.strictEqual(passCost.passed, true);
+
+    const failCost = AssertionEngine.evaluate({ type: 'cost_ceiling', threshold: 0.000001 }, output, 50);
+    assert.strictEqual(failCost.passed, false);
+    assert.ok(failCost.reason?.includes('exceeded cost ceiling'));
+  });
 });
