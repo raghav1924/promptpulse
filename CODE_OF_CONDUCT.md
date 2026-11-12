@@ -25,3 +25,4 @@ acceptable behavior and will take appropriate and fair corrective action in
 response to any behavior that they deem inappropriate, threatening, or offensive.
 
 Project Maintainer: **[Jatin Sharma](https://jatinsh.netlify.app/)** • [raghavjatin245@gmail.com](mailto:raghavjatin245@gmail.com)
+
