@@ -95,4 +95,15 @@ describe('AssertionEngine Validation Rules', () => {
     assert.strictEqual(failCost.passed, false);
     assert.ok(failCost.reason?.includes('exceeded cost ceiling'));
   });
+
+  it('evaluates max_tokens ceilings accurately based on token estimation', () => {
+    const briefText = 'Hello world';
+    const longText = 'This is a significantly longer text response that contains many words and will exceed five tokens easily.';
+    const passTokenCeiling = AssertionEngine.evaluate({ type: 'max_tokens', threshold: 100 }, briefText, 10);
+    assert.strictEqual(passTokenCeiling.passed, true);
+
+    const failTokenCeiling = AssertionEngine.evaluate({ type: 'max_tokens', threshold: 5 }, longText, 50);
+    assert.strictEqual(failTokenCeiling.passed, false);
+    assert.ok(failTokenCeiling.reason?.includes('exceeded maximum threshold'));
+  });
 });
