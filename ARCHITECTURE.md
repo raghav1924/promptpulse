@@ -52,3 +52,4 @@ Each assertion operates purely in-memory:
 ## 2. Zero External Dependencies Guarantee
 
 PromptPulse is built strictly with Node.js standard modules (`node:fs`, `node:path`, `node:http`, `node:url`). All token estimations, JSON validations, and web dashboards run at native speeds with sub-millisecond evaluation times.
+
