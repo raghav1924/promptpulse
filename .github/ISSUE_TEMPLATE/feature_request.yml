@@ -1,0 +1,29 @@
+name: Feature Request
+description: Suggest an enhancement or new assertion operator for PromptPulse
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve PromptPulse!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to an assertion or prompt regression problem?
+      description: Explain the testing limitation or use case.
+      placeholder: When testing structured outputs from LLMs...
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the proposed operator or feature
+      description: How should the assertion or comparator behave?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other tools or approaches you evaluated.
