@@ -25,6 +25,7 @@ When teams iterate on system prompts, instruction templates, or AI agent persona
 - 📉 **Regression & Delta Detector:** Compare baseline prompts against candidate prompts to measure score changes, token delta, and cost delta.
 - 🎨 **Dark-Mode Visual Studio:** Inspect test runs, assertion breakdowns, and side-by-side prompt diffs on `http://localhost:6060`.
 - ⚡ **Zero External Dependencies:** Built with pure TypeScript and Node.js standard libraries for instantaneous execution.
+- 📖 **Cheatsheet & Guides:** See [docs/CHEATSHEET.md](docs/CHEATSHEET.md), [ARCHITECTURE.md](ARCHITECTURE.md), and [docs/PROMPT_TESTING_GUIDE.md](docs/PROMPT_TESTING_GUIDE.md) for complete operator reference and CI setup patterns.
 
 ---
 
