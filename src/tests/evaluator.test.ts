@@ -64,5 +64,11 @@ describe('PromptEvaluator & Comparator Engine', () => {
     const rendered = PromptEvaluator.interpolate(rawTemplate, {});
     assert.strictEqual(rendered, rawTemplate);
   });
+
+  it('interpolates template variables with internal whitespace gracefully', () => {
+    const template = 'Greetings, {{   name   }}! Role: {{  role  }}';
+    const rendered = PromptEvaluator.interpolate(template, { name: 'Alice', role: 'Architect' });
+    assert.strictEqual(rendered, 'Greetings, Alice! Role: Architect');
+  });
 });
 
