@@ -73,6 +73,12 @@ describe('AssertionEngine Validation Rules', () => {
     const failForbidden = AssertionEngine.evaluate({ type: 'forbidden_words' }, apologeticOutput);
     assert.strictEqual(failForbidden.passed, false);
     assert.ok(failForbidden.reason?.includes('as an ai'));
+
+    const customForbidden = AssertionEngine.evaluate({
+      type: 'forbidden_words',
+      value: ['confidential_key', 'INTERNAL_ONLY']
+    }, 'This document is internal_only and not for distribution.');
+    assert.strictEqual(customForbidden.passed, false);
   });
 
   it('computes Levenshtein similarity against golden answers', () => {
