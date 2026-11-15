@@ -17,3 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Native Node.js test runner suite with 10 passing unit tests.
 - Zero runtime external dependencies.
 
+
+## [1.1.0] - 2026-11-15
+### Added
+- Multi-operator assertion matrix documentation.
+- Side-by-side prompt regression detection guides.
+- Token calculation and inference cost models.
