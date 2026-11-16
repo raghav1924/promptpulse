@@ -23,3 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Multi-operator assertion matrix documentation.
 - Side-by-side prompt regression detection guides.
 - Token calculation and inference cost models.
+
+## [1.2.0] - 2026-11-16
+### Added
+- Master design system documentation (Ethereal, Bento Grid).
+- Golden dataset curation guide for prompt engineering.
+- Token ceiling and multi-model cost optimization strategies.
