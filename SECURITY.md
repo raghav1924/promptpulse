@@ -1,4 +1,4 @@
-# Security Policy
+# Security Policy for promptpulse
 
 ## Supported Versions
 
@@ -6,14 +6,16 @@
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
 
-## Reporting a Vulnerability
+## Reporting Vulnerabilities
 
-If you discover a security issue or input validation vulnerability in PromptPulse, please report it via email to **[raghavjatin245@gmail.com](mailto:raghavjatin245@gmail.com)**.
+If you discover a security vulnerability in **promptpulse**, please do not open a public issue. Instead, report it directly to the maintainer:
 
-Please include:
-1. Vulnerability description and steps to reproduce.
-2. Sample suite or test inputs.
-3. Impact assessment.
+- **Email:** [raghavjatin245@gmail.com](mailto:raghavjatin245@gmail.com)
+- **Maintainer:** Jatin Sharma ([https://jatinsh.netlify.app/](https://jatinsh.netlify.app/))
 
-Author: **[Jatin Sharma](https://jatinsh.netlify.app/)**
+Please provide:
+1. Detailed description of the vulnerability.
+2. Reproduction steps or proof of concept.
+3. Potential impact and proposed mitigations.
 
+We will acknowledge receipt within 24 hours and provide an estimated disclosure and patch timeline.
