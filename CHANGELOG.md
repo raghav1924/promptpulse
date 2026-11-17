@@ -1,31 +1,23 @@
-# Changelog
+# Changelog — promptpulse
 
-All notable changes to **PromptPulse** will be documented in this file.
+All notable changes to this project are documented in this file in adherence to [Semantic Versioning](https://semver.org/).
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+---
 
-## [1.0.0] - 2026-11-12
-
+## [1.1.0] - 2026-11-17
 ### Added
-- Multi-operator assertion engine (`json_schema`, `contains`, `not_contains`, `regex`, `forbidden_words`, `max_tokens`, `cost_ceiling`, `similarity`).
-- Variable interpolation for prompt templates (`{{variable}}`).
-- Prompt comparison and regression detector comparing baseline against candidate prompts.
-- Fast heuristic token estimation and cost calculation across major model pricing tiers.
-- Interactive dark-mode Web Studio on port 6060 with live assertion matrix and diff viewer.
-- Standalone HTML report exporter for CI/CD workflows.
-- Native Node.js test runner suite with 10 passing unit tests.
-- Zero runtime external dependencies.
+- Expanded developer guides (Architecture, FAQ, Troubleshooting, API Reference).
+- Enhanced platform detection and runtime health assertions.
+- Standardized GitHub issue and PR templates.
 
+## [1.0.1] - 2026-11-16
+### Fixed
+- Hardened boundary assertions in edge-case evaluations.
+- Enhanced ANSI terminal output formatting and contrast.
 
-## [1.1.0] - 2026-11-15
+## [1.0.0] - Initial Production Release
 ### Added
-- Multi-operator assertion matrix documentation.
-- Side-by-side prompt regression detection guides.
-- Token calculation and inference cost models.
-
-## [1.2.0] - 2026-11-16
-### Added
-- Master design system documentation (Ethereal, Bento Grid).
-- Golden dataset curation guide for prompt engineering.
-- Token ceiling and multi-model cost optimization strategies.
+- Core processing engine, AST parsers, and heuristic rule catalog.
+- Embedded interactive Dark-Mode Web Studio.
+- Zero-dependency architecture with native Node.js runtime support.
+- Full automated test suite and GitHub Actions CI workflow.
