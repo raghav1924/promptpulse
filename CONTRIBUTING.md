@@ -1,32 +1,31 @@
-# Contributing to PromptPulse
+# Contributing to promptpulse
 
-Thank you for contributing to **PromptPulse**! We welcome community contributions to improve prompt regression testing and assertion tooling.
+Thank you for your interest in contributing to **promptpulse**! We welcome bug fixes, documentation improvements, and feature proposals.
 
-## Development Setup
+## Development Workflow
 
-1. **Clone the repository:**
+1. Fork the repository and create your feature branch:
    ```bash
-   git clone https://github.com/raghav1924/promptpulse.git
-   cd promptpulse
+   git checkout -b feature/amazing-feature
    ```
-
-2. **Compile TypeScript:**
+2. Install dependencies and ensure strict type-checking passes:
    ```bash
    npm run build
    ```
-
-3. **Run Unit Tests:**
+3. Run test suites:
    ```bash
    npm test
    ```
+4. Commit your changes using Conventional Commits:
+   - `feat:` for new capabilities
+   - `fix:` for bug fixes
+   - `docs:` for documentation updates
+   - `test:` for test additions
 
-## Pull Request Guidelines
-
-- Ensure all unit tests pass with `npm test`.
-- Maintain zero external dependencies using Node.js standard libraries.
-- Write conventional commit messages (`feat:`, `fix:`, `docs:`, `test:`).
-- Document new assertion types in `README.md`.
+## Code Quality Standards
+- Pure TypeScript with strict mode enabled.
+- Zero external runtime npm dependencies whenever feasible.
+- Comprehensive test coverage for all parsing, calculations, and execution paths.
 
 ---
-Maintained by **[Jatin Sharma](https://jatinsh.netlify.app/)** • GitHub: **[@raghav1924](https://github.com/raghav1924)**
-
+*Maintained by [Jatin Sharma](https://jatinsh.netlify.app/)*
